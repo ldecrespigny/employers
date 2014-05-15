@@ -1,19 +1,19 @@
 <h1>Listing pins</h1>
 
 
-  <div class="panel-heading">
-Profile details
-  </div>
+
   
-<div class="panel panel-default">
-<div class="panel-body">
-<table>
 
 
 <% if user_signed_in? %>
-  <tbody>
-
     <% @pins.each do |pin| %>
+    <% if pin.user = current_user %>
+<%= link_to 'Edit', edit_pin_path(pin) %>
+  
+  <div class="panel panel-default">
+<div class="panel-body">
+<table>
+  <tbody>
       <tr><%= pin.description %><hr></tr>
         <tr><%= pin.employees %><hr></tr>
         <tr><%= pin.funding %><hr></tr>
@@ -23,7 +23,8 @@ Profile details
         <tr><%= pin.phone %><hr></tr>
         <tr><%= pin.address %><hr></tr>
 
-
+<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
     <% end %>
   </tbody>
 </table>
@@ -34,5 +35,7 @@ Profile details
 </div>
 
 <br>
-
+<% if user_signed_in? %>
+  <%= link_to 'New Pin', new_pin_path %>
+<% end %>
 <% end %>

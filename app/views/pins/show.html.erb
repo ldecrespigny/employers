@@ -14,7 +14,7 @@ Update your Profile  <%= link_to 'Update details', edit_pin_path(@pin), class: "
 
 
 <% if user_signed_in? %>
-<% if current_user.id == @user.id %>
+
   <tbody>
 
       <tr><%= @pin.description %><hr></tr>
@@ -35,7 +35,6 @@ Update your Profile  <%= link_to 'Update details', edit_pin_path(@pin), class: "
 
   </div>
 </div>
-    <% end %>
         <% end %>
 
 

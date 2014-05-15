@@ -6,4 +6,6 @@ class RegistrationsController < Devise::RegistrationsController
     new_pin_path
   end
 
+
+
 end
