@@ -1,9 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @pin.description %>
-</p>
+<h1>
+Update your Profile  <%= link_to 'Update details', edit_pin_path(@pin), class: "btn btn-primary", style: "float:right" %>
+  </h1>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+
+
+
+  
+<div class="panel panel-default">
+<div class="panel-body">
+<table>
+
+
+<% if user_signed_in? %>
+<% if current_user.id == @user.id %>
+  <tbody>
+
+      <tr><%= @pin.description %><hr></tr>
+        <tr><%= @pin.employees %><hr></tr>
+        <tr><%= @pin.funding %><hr></tr>
+        <tr><%= @pin.location %><hr></tr>
+        <tr><%= @pin.vision %><hr></tr>
+        <tr><%= @pin.website %><hr></tr>
+        <tr><%= @pin.phone %><hr></tr>
+        <tr><%= @pin.address %><hr></tr>
+
+
+
+  </tbody>
+</table>
+
+
+
+  </div>
+</div>
+    <% end %>
+        <% end %>
+
+
+
+

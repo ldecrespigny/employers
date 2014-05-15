@@ -1,3 +1,4 @@
+
 <%= form_for(@pin) do |f| %>
   <% if @pin.errors.any? %>
     <div id="error_explanation">
@@ -10,12 +11,51 @@
       </ul>
     </div>
   <% end %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: "form-control" %>
+    <div class="form-group">
+      <%= f.label :no_of_employees %>
+      <%= f.text_field :employees, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :company_vision %>
+      <%= f.text_field :vision, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :funding_situation %>
+      <%= f.text_field :funding, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :website %>
+      <%= f.text_field :website, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Update", class: "btn btn-primary" %>
+    </div>
+  <% end %>
   </div>
-  <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
+</div>
