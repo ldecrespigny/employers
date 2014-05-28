@@ -1,1 +1,19 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$body-bg: #ecf0f1;
+$navbar-inverse-bg: black;
+$navbar-inverse-link-color: #bdc3c7;
+$border-radius-base: 1px;
+$jumbotron-bg: white;
+$btn-info-bg: #95a5a6;
+$btn-info-color: black;
+
 @import 'bootstrap';
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #bdc3c7;
+    margin: 1em 0; padding: 0; }
