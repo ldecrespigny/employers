@@ -1,32 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default title">
+<div class="panel-body">
+
+
+<h4>Obrigado por seu contato - um respresentante de nossa empresa vai ficar em contato com você daqui um pouco. Se tiver qualquer duvida, entre em contato (veja o link em cima) </h4>
+
+</div>
+
+</div>
 
 <h1>
-Atualize seu perfil <%= link_to 'Update details', edit_pin_path(@pin), class: "btn btn-primary", style: "float:right" %>
+Atualize seu perfil <%= link_to 'Edite perfil', edit_pin_path(@pin), class: "btn btn-primary", style: "float:right" %>
   </h1>
-
-
-
-
   
 <div class="panel panel-default">
 <div class="panel-body">
 <table>
-
 
 <% if user_signed_in? %>
 
   <tbody>
 
       <tr><%= @pin.description %><hr></tr>
-        <tr><%= @pin.employees %><hr></tr>
-        <tr><%= @pin.funding %><hr></tr>
-        <tr><%= @pin.location %><hr></tr>
-        <tr><%= @pin.vision %><hr></tr>
         <tr><%= @pin.website %><hr></tr>
         <tr><%= @pin.phone %><hr></tr>
         <tr><%= @pin.address %><hr></tr>
-
-
+        <tr><%= @pin.employees %><hr></tr>
+        <tr><%= @pin.location %><hr></tr>
 
   </tbody>
 </table>

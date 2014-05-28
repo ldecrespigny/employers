@@ -1,4 +1,6 @@
 
+<h2>Pre-enche as detalhes em baixo e um de nosso time ficará em contato com você. </h2>
+
 <%= form_for(@pin) do |f| %>
   <% if @pin.errors.any? %>
     <div id="error_explanation">
@@ -14,23 +16,18 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="form-group">
-      <%= f.label :descrição %>
+      <%= f.label :nome_de_contato %>
       <%= f.text_field :description, :size => "180x10", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :telefone %>
+      <%= f.text_field :phone, class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= f.label :numero_de_funcionários %>
       <%= f.text_field :employees, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :visão_de_empresa %>
-      <%= f.text_field :vision, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :tipo_de_financiamento_da_empresa %>
-      <%= f.text_field :funding, class: "form-control" %>
     </div>
 
     <div class="form-group">
@@ -41,11 +38,6 @@
     <div class="form-group">
       <%= f.label :website %>
       <%= f.text_field :website, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :telefone %>
-      <%= f.text_field :phone, class: "form-control" %>
     </div>
 
     <div class="form-group">

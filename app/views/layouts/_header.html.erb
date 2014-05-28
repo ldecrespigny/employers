@@ -13,10 +13,11 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
 <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", 'http://contratadomelhor.com' %></li>
+
         <li><%= link_to "Contato", 'http://contratadomelhor.com/pages/contact' %></li>
         <li><%= link_to "Duvidas frequentes - empresas", pages_about_path %></li>
         <% if user_signed_in? %>
+        <li><%= link_to "Meu perfil", current_user.pins.first %></li>
         <li><%= link_to "Minha conta", edit_user_registration_path %></li>
           <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
         <% else %>
