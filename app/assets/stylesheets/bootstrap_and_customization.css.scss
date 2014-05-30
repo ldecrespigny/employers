@@ -7,12 +7,15 @@ $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Ari
 $body-bg: #ecf0f1;
 $navbar-inverse-bg: black;
 $navbar-inverse-link-color: #bdc3c7;
-$border-radius-base: 1px;
+$border-radius-base: 3px;
 $jumbotron-bg: white;
 $btn-info-bg: #95a5a6;
 $btn-info-color: black;
 
 @import 'bootstrap';
+
+
+
 
 hr { display: block; height: 1px;
     border: 0; border-top: 1px solid #bdc3c7;
@@ -21,4 +24,15 @@ hr { display: block; height: 1px;
 .title {
 	background: #7f8c8d;
 	color: #ecf0f1;
+}
+
+.btn-primary {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #73aec9), color-stop(5%, #73aec9), color-stop(5%, #338ab0), color-stop(100%, #0571a6));
+
+}
+
+
+.btn-default {
+background: linear-gradient(to bottom, #ffffff,#e1e1e1);
+
 }
