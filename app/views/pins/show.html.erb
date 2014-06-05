@@ -8,16 +8,14 @@
 
 </div>
 
-<h1>
-Atualize seu perfil <%= link_to 'Edite perfil', edit_pin_path(@pin), class: "btn btn-primary", style: "float:right" %>
-  </h1>
+
   
 <div class="panel panel-default">
 <div class="panel-body">
-<table>
+
 
 <% if user_signed_in? %>
-
+<table>
   <tbody>
 
       <tr><%= @pin.description %><hr></tr>
@@ -35,6 +33,8 @@ Atualize seu perfil <%= link_to 'Edite perfil', edit_pin_path(@pin), class: "btn
 
 <% end %>
 
+
+<%= link_to 'Edite perfil', edit_pin_path(@pin), class: "btn btn-primary" %>
 
 
 

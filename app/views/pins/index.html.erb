@@ -1,41 +1,34 @@
-<h1>Listing pins</h1>
-
-
 
   
 
 
 <% if user_signed_in? %>
-    <% @pins.each do |pin| %>
-    <% if pin.user = current_user %>
-<%= link_to 'Edit', edit_pin_path(pin) %>
-  
+
+<% if current_user.pins.first.blank? %>
+  Por favor, pre-enche seu perfil
+  <%= link_to 'Edite perfil', edit_pin_path(@pin), class: "btn btn-primary", style: "float:right" %>
+
+<% else %>
+
+    <% current_user.pins.each do |pin| %>
+
   <div class="panel panel-default">
 <div class="panel-body">
 <table>
   <tbody>
-      <tr><%= pin.description %><hr></tr>
-        <tr><%= pin.employees %><hr></tr>
-        <tr><%= pin.funding %><hr></tr>
-        <tr><%= pin.location %><hr></tr>
-        <tr><%= pin.vision %><hr></tr>
-        <tr><%= pin.website %><hr></tr>
-        <tr><%= pin.phone %><hr></tr>
-        <tr><%= pin.address %><hr></tr>
 
-<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
-    <% end %>
+      <tr><%= @pin.description %><hr></tr>
+        <tr><%= @pin.website %><hr></tr>
+        <tr><%= @pin.phone %><hr></tr>
+        <tr><%= @pin.address %><hr></tr>
+        <tr><%= @pin.employees %><hr></tr>
+        <tr><%= @pin.location %><hr></tr>
+
   </tbody>
 </table>
-
-
-
-  </div>
+</div>
 </div>
 
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path %>
+<% end %>
 <% end %>
 <% end %>
