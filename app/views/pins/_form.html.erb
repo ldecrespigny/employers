@@ -1,5 +1,5 @@
 
-<h2>Pre-enche as detalhes em baixo e um de nosso time ficará em contato com você. </h2>
+<h2>Preencha as informações abaixo e nossa equipe entrará em contato com você </h2>
 
 <%= form_for(@pin) do |f| %>
   <% if @pin.errors.any? %>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :localizado %>
+      <%= f.label :localização %>
       <%= f.text_field :location, class: "form-control" %>
     </div>
 
@@ -46,7 +46,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.submit "Atualizar", class: "btn btn-primary" %>
+      <%= f.submit "Salvar", class: "btn btn-primary" %>
     </div>
   <% end %>
   </div>
