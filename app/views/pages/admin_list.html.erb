@@ -1,5 +1,15 @@
 <% if current_user.email = "ldecrespigny@gmail.com" %>
 	<%   @users.each do |x| %>
+  	<div class="panel panel-default col-md-6">
+  	<div class="panel-body">
+
 	<%= x.email %>
+		<% x.pins.each do |pin| %>
+			<% for attribute in pin.attributes.keys %>
+				<%= attribute.humanize %>: <%= pin.attributes[attribute].to_s %><br>
+			<% end %>
+		<% end %>
+	</div>
+	</div>
 	<% end %>
-	<% end %>
+<% end %>
