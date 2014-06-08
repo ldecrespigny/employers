@@ -1,0 +1,5 @@
+<% if current_user.email = "ldecrespigny@gmail.com" %>
+	<%   @users.each do |x| %>
+	<%= x.email %>
+	<% end %>
+	<% end %>
